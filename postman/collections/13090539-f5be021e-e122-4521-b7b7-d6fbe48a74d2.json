@@ -174,7 +174,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"pid\": 19\r\n    // \"commitHash\": \"8d6de51ac542051f1a57179f204766fbfdd97d8c\"\r\n}",
+							"raw": "{\r\n    \"pid\": 19,\r\n    \"commitHash\": \"8d6de51ac542051f1a57179f204766fbfdd97d8c\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
