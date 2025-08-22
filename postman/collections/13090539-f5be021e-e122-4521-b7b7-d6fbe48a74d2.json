@@ -739,6 +739,18 @@
 				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "13090539-2d15ad43-aa5f-4bcf-86a2-8d268cf6ce2d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
