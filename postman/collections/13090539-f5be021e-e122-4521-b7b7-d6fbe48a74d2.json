@@ -450,7 +450,7 @@
 			"response": []
 		},
 		{
-			"name": "getWorktreeFileInfo Copy",
+			"name": "getApplyHistory",
 			"id": "13090539-c8f3e162-a2cd-461c-b631-eae6e3879ecd",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
