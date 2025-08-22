@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "13090539-f5be021e-e122-4521-b7b7-d6fbe48a74d2",
+		"name": "gogit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "原始call Copy",
+			"id": "13090539-f8aa4068-10f6-4e23-b77f-954c3819322a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"你好\",\r\n    \"instruction\": [],\r\n    \"tail\": [],\r\n    \"images\": [],\r\n    \"model\": \"qwen3-coder-plus\",\r\n    \"head\": [],\r\n    \"rawVlcode\": \"\",\r\n    \"theme\": \"\",\r\n    \"nid\": 11980497,\r\n    \"filterIds\": [],\r\n    \"project\": {\r\n        \"filePath\": \"apps/app3/App.vl\",\r\n        \"pid\":11\r\n    },\r\n    \"extra\": {\r\n        \"prompt\": {\r\n            \"instruction\": [],\r\n            \"head\": [],\r\n            \"tail\": []\r\n        }\r\n    },\r\n    \"stream\": true,\r\n    \"source\": \"dashscope\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiQuery/callAIPrompt",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiQuery",
+						"callAIPrompt"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "projectLists",
+			"id": "13090539-421cc3a2-5f9b-473c-989d-d7d7ff94ed54",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/projectLists",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"projectLists"
+					]
+				},
+				"description": "Upload a new component. The `code` field should be a zip file containing the component's source code."
+			},
+			"response": []
+		},
+		{
+			"name": "projectDelete",
+			"id": "13090539-63a05abf-1cea-4b36-8760-dba7ebda95ae",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/projectLists",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"projectLists"
+					]
+				},
+				"description": "Upload a new component. The `code` field should be a zip file containing the component's source code."
+			},
+			"response": []
+		},
+		{
+			"name": "fileTreeList",
+			"id": "13090539-fa13f226-4a57-47a8-9c96-8ba475be2392",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\":11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/fileTreeList",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"fileTreeList"
+					]
+				},
+				"description": "Upload a new component. The `code` field should be a zip file containing the component's source code."
+			},
+			"response": []
+		},
+		{
+			"name": "projectAdd",
+			"id": "13090539-2d2f7130-99ae-4b73-a729-9169744f2516",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectName\": \"app5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/projectAdd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"projectAdd"
+					]
+				},
+				"description": "Upload a new component. The `code` field should be a zip file containing the component's source code."
+			},
+			"response": []
+		},
+		{
+			"name": "sessionsByIds",
+			"id": "13090539-2be185d2-c5f6-4ad6-8384-3b99c8cd3ca9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\":[675,765]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiHistory/sessionsByIds",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiHistory",
+						"sessionsByIds"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSessionLink",
+			"id": "13090539-9d0a69bb-0907-49b9-bc1f-76969ed8b9d7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\": 11,\r\n    \"filePath\": \"apps/app3/App.vl\",\r\n    \"sessionId\": 865,\r\n    \"deleteFile\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/deleteSessionLink",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"deleteSessionLink"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "addFilesToWorktree",
+			"id": "13090539-5a195f63-1ab4-410b-84ff-5eca177308eb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\": 11,\r\n    \"fileContents\": {\r\n        \"apps/app3/App.vl\": \"hahaha\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/addFilesToWorktree",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"addFilesToWorktree"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getWorktreeFileInfo",
+			"id": "13090539-eff59741-32ea-4588-b025-e860b13c78b0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\": 11,\r\n    \"filePath\": \"apps/app3/App.vl\",\r\n    // \"type\": \"log\"\r\n    \"fileHash\":\"643007e34f5d728abf7feca86d33d67f95838741\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/getWorktreeFileInfo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"getWorktreeFileInfo"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "linkVersion(no need)",
+			"id": "13090539-0fb91714-eeb9-45f3-be35-42e57b59a427",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\": 11,\r\n    \"filePath\": \"apps/app3/App.vl\",\r\n    // \"type\": \"log\"\r\n    \"versionId\": 1310\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/linkVersion",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"linkVersion"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "updateAndStage",
+			"id": "13090539-6251496c-ff69-4e4a-bd5d-8fa25c59683b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\": 11,\r\n    \"filePath\": \"apps/app3/App.vl\",\r\n    // \"type\": \"log\"\r\n    \"versionId\": 1310\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/linkVersion",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"linkVersion"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "updateAndStage Copy",
+			"id": "13090539-04067b44-c5b6-417f-8172-dca312a8633c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pid\": 11,\r\n    \"filePath\": \"apps/app3/App.vl\",\r\n    // \"type\": \"log\"\r\n    \"versionId\": 1310\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/edt/editor/aiGit/linkVersion",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"edt",
+						"editor",
+						"aiGit",
+						"linkVersion"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
+			},
+			"response": []
+		}
+	]
+}
