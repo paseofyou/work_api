@@ -498,13 +498,13 @@
 			"response": []
 		},
 		{
-			"name": "updateAndStage Copy",
+			"name": "exportProject",
 			"id": "13090539-04067b44-c5b6-417f-8172-dca312a8633c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
@@ -522,7 +522,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"pid\": 11,\r\n    \"filePath\": \"apps/app3/App.vl\",\r\n    // \"type\": \"log\"\r\n    \"versionId\": 1310\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -530,7 +530,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/edt/editor/aiGit/linkVersion",
+					"raw": "{{url}}/edt/editor/aiGit/exportProject?pid=19",
 					"host": [
 						"{{url}}"
 					],
@@ -538,7 +538,14 @@
 						"edt",
 						"editor",
 						"aiGit",
-						"linkVersion"
+						"exportProject"
+					],
+					"query": [
+						{
+							"key": "pid",
+							"value": "19",
+							"type": "text"
+						}
 					]
 				},
 				"description": "Generated from cURL: curl -X POST https://openrouter.ai/api/v1/chat/completions \\\r\n  -H \"Authorization: Bearer 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\" \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"model\": \"google/gemini-2.0-flash-exp:free\",\r\n    \"messages\": [\r\n      {\r\n        \"role\": \"user\",\r\n        \"content\": \"北京天气如何\"\r\n      }\r\n    ],\r\n    \"tools\": [\r\n      {\r\n        \"type\": \"function\",\r\n        \"function\": {\r\n          \"name\": \"weather_query_weather\",\r\n          \"description\": \"输入指定城市的英文名称，返回今日天气查询结果。\\n:param city: 城市名称（需使用英文）\\n:return: 格式化后的天气信息\",\r\n          \"parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n              \"city\": {\r\n                \"type\": \"string\",\r\n                \"description\": \"城市名称（英文）\"\r\n              }\r\n            },\r\n            \"required\": [\"city\"]\r\n          }\r\n        }\r\n      }\r\n    ]\r\n  }'\r\n"
