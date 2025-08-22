@@ -150,7 +150,7 @@
 					"response": []
 				},
 				{
-					"name": "getApplyHistory Copy",
+					"name": "rollbackProject",
 					"id": "13090539-ca46aa11-9688-4215-86c1-c0c9335faa49",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
